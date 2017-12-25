@@ -1,0 +1,19 @@
+---
+title:  "hi"
+date:   2017-12-24 12:04:23
+categories: [intro]
+tags: [intro]
+---
+hello
+
+`hello`
+
+Jekyll also offers powerful support for code snippets:
+
+``` ruby
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+```
