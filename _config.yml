@@ -1,0 +1,43 @@
+# Site settings
+title: 꾸준히 느리게 하는 개발이야기
+description: '인생은 길다'
+url: 'https://lohanyeon.github.io'
+baseurl: ''
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: '연규환'
+  email: yeonkh94@gmail.com
+  twitter_username: lohanyeon
+  facebook_username: lohanyeon
+  github_username:  lohanyeon
+  linkedin_username:  lohanyeon
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
