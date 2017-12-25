@@ -1,13 +1,13 @@
 # Site settings
 title: 꾸준히 느리게 하는 개발이야기
-description: '인생은 길다'
+description: '인생은 길다. 급할거 없다.'
 url: 'https://lohanyeon.github.io'
 baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
 author:
-  name: '연규환'
+  name: 'lohanyeon'
   email: yeonkh94@gmail.com
   twitter_username: lohanyeon
   facebook_username: lohanyeon
