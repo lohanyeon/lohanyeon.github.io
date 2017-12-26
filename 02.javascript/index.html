@@ -1,16 +1,13 @@
 ---
 title: Javascript
-layout: post
-pagination:
-    enabled: true
-    category: javascript
-    per_page: 5
+layout: default
 ---
 
 <div class="main-post-list">
 
+  <h2>{{page.title}}</h2>
   <ol class="post-list">
-    {% for post in paginator.posts %}
+    {% for post in site.categories.javascript %}
       <li>
         <h2 class="post-list__post-title post-title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
         <p class="excerpt">{{ post.excerpt | strip_html }}&hellip;</p>
@@ -24,25 +21,5 @@ pagination:
       </li>
     {% endfor %}
   </ol>
-
-  <hr class="post-list__divider ">
-
-  {% if paginator.previous_page or paginator.next_page %}
-    <nav class="pagination" role="navigation">
-      {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-          <a rel="prev" class="posts newer btn small" href="{{ site.baseurl }}/01.intro/" title="Previous Page">← 이전포스트</a>
-        {% else %}
-          <a rel="prev" class="posts newer btn small" href="{{ site.baseurl }}/01.intro/page{{ paginator.previous_page }}/">← 이전포스트</a>
-        {% endif %}
-      {% endif %}
-
-      <span class="pagination__page-number">Page {{ paginator.page}} of {{ paginator.total_pages}}</span>
-
-      {% if paginator.next_page %}
-        <a rel="next" class="posts older btn small" href="{{ site.baseurl }}/01.intro/page{{ paginator.next_page }}/">다음포스트 →</a>
-      {% endif %}
-    </nav>
-  {% endif %}
 
 </div>
