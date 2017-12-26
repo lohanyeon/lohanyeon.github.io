@@ -4,7 +4,7 @@ description: '인생은 길다. 급할거 없어.'
 url: 'https://lohanyeon.github.io'
 baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'
-# disqus_shortname: 'your-disqus-name'
+disqus_shortname: 'lohanyeon'
 
 author:
   name: 'lohanyeon'
