@@ -1,47 +1,48 @@
 ---
-title: intro
-layout: categories
+title: Intro
+layout: post
 pagination:
     enabled: true
-    categories: intro
-    per_page: 2
+    category: intro
+    per_page: 5
 ---
 
-{% for post in paginator.posts %}
-    <div class="post-list">
-        <h2><a href="{{ post.url }}" class="link-post_list">{{ post.title }}</a></h2>
-        <p class="post-meta">{{ post.date | date: "%b %d, %Y" }} by {{ post.author }}</p>
-        <div class="post-list-content">
-            {{ post.excerpt | truncatewords: 45, '...' }}
-            <p class="text-right"><a href="{{ post.url }}">read more...</a></p>
-        </div>
-    </div>
-{% endfor %}
+<div class="main-post-list">
 
-{% if paginator.total_pages > 1 %}
-    <div class="pagination">
-        {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-        {% else %}
-            <span>&laquo; Prev</span>
-        {% endif %}
-
-        {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-                <em>{{ page }}</em>
-
-            {% elsif page == 1 %}
-                <a href="{{ '/01.javascript/index.html' | prepend: site.baseurl }}">{{ page }}</a>
-            {% else %}
-                <a href="{{ site.paginate_path | prepend: '/01.javascript/' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-                <!-- 페이지 번호를 나타내기 위한 코드. -->
+  <ol class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <h2 class="post-list__post-title post-title"><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+        <p class="excerpt">{{ post.excerpt | strip_html }}&hellip;</p>
+        <div class="post-list__meta">
+            <time datetime="{{ post.date | date: "%-d %b %Y" }}" class="post-list__meta--date date">{{ post.date | date: "%-d %b %Y" }}</time>
+            {% if post.tags.size > 0 %}
+            &#8226; <span class="post-meta__tags">on {% for tag in post.tags %}<a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a> {% endfor %}</span>
             {% endif %}
-        {% endfor %}
+        </div>
+        <hr class="post-list__divider">
+      </li>
+    {% endfor %}
+  </ol>
 
-        {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  <hr class="post-list__divider ">
+
+  {% if paginator.previous_page or paginator.next_page %}
+    <nav class="pagination" role="navigation">
+      {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+          <a rel="prev" class="posts newer btn small" href="{{ site.baseurl }}/01.intro/" title="Previous Page">← 이전포스트</a>
         {% else %}
-            <span>Next &raquo;</span>
+          <a rel="prev" class="posts newer btn small" href="{{ site.baseurl }}/01.intro/page{{ paginator.previous_page }}/">← 이전포스트</a>
         {% endif %}
-    </div>
-{% endif %}
+      {% endif %}
+
+      <span class="pagination__page-number">Page {{ paginator.page}} of {{ paginator.total_pages}}</span>
+
+      {% if paginator.next_page %}
+        <a rel="next" class="posts older btn small" href="{{ site.baseurl }}/01.intro/page{{ paginator.next_page }}/">다음포스트 →</a>
+      {% endif %}
+    </nav>
+  {% endif %}
+
+</div>

@@ -1,6 +1,6 @@
 # Site settings
 title: 꾸준히 느리게 하는 개발이야기
-description: '인생은 길다. 급할거 없다.'
+description: '인생은 길다. 급할거 없어.'
 url: 'https://lohanyeon.github.io'
 baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'
@@ -24,7 +24,7 @@ defaults:
 
 # Build settings
 destination: _site
-paginate: 10
+# paginate: 5
 permalink: /:year/:title/
 markdown: kramdown
 highlighter: rouge
@@ -39,12 +39,15 @@ kramdown:
   # do not replace newlines by <br>s
   hard_wrap: false
 
+# gems: ['jekyll-paginate']
+gems:
+    - jekyll-paginate-v2
+
 pagination:
-    enable: true
-    per_page: 2
+    enabled: true
+    per_page: 5
     limit: 0
     sort_field: "date"
     sort_reverse: true
 
-gems: ['jekyll-paginate-v2']
 exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']

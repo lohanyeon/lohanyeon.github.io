@@ -1,8 +1,9 @@
 ---
-layout: default
+title: Javascript
+layout: post
 pagination:
     enabled: true
-    categories: [intro, javascript, java-jsp, database, python]
+    category: javascript
     per_page: 5
 ---
 
@@ -27,7 +28,21 @@ pagination:
   <hr class="post-list__divider ">
 
   {% if paginator.previous_page or paginator.next_page %}
-      {% include pagination.html %}
+    <nav class="pagination" role="navigation">
+      {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+          <a rel="prev" class="posts newer btn small" href="{{ site.baseurl }}/01.intro/" title="Previous Page">← 이전포스트</a>
+        {% else %}
+          <a rel="prev" class="posts newer btn small" href="{{ site.baseurl }}/01.intro/page{{ paginator.previous_page }}/">← 이전포스트</a>
+        {% endif %}
+      {% endif %}
+
+      <span class="pagination__page-number">Page {{ paginator.page}} of {{ paginator.total_pages}}</span>
+
+      {% if paginator.next_page %}
+        <a rel="next" class="posts older btn small" href="{{ site.baseurl }}/01.intro/page{{ paginator.next_page }}/">다음포스트 →</a>
+      {% endif %}
+    </nav>
   {% endif %}
 
 </div>

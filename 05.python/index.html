@@ -1,10 +1,10 @@
 ---
-title: javascript
+title: Python
 layout: post
 pagination:
     enabled: true
-    category: javascript
-    per_page: 2
+    category: python
+    per_page: 5
 ---
 
 {% for post in paginator.posts %}
@@ -31,9 +31,9 @@ pagination:
                 <em>{{ page }}</em>
 
             {% elsif page == 1 %}
-                <a href="{{ '/01.javascript/index.html' | prepend: site.baseurl }}">{{ page }}</a>
+                <a href="{{ '/05.python/index.html' | prepend: site.baseurl }}">{{ page }}</a>
             {% else %}
-                <a href="{{ site.paginate_path | prepend: '/01.javascript/' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                <a href="{{ site.paginate_path | prepend: '/05.python/' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
                 <!-- 페이지 번호를 나타내기 위한 코드. -->
             {% endif %}
         {% endfor %}

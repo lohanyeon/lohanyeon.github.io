@@ -1,10 +1,10 @@
 ---
-title: database
-layout: categories
+title: Database
+layout: post
 pagination:
     enabled: true
     category: database
-    per_page: 2
+    per_page: 5
 ---
 
 {% for post in paginator.posts %}
@@ -31,9 +31,9 @@ pagination:
                 <em>{{ page }}</em>
 
             {% elsif page == 1 %}
-                <a href="{{ '/03.database/index.html' | prepend: site.baseurl }}">{{ page }}</a>
+                <a href="{{ '/04.javascript/index.html' | prepend: site.baseurl }}">{{ page }}</a>
             {% else %}
-                <a href="{{ site.paginate_path | prepend: '/03.database/' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                <a href="{{ site.paginate_path | prepend: '/04.javascript/' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
                 <!-- 페이지 번호를 나타내기 위한 코드. -->
             {% endif %}
         {% endfor %}

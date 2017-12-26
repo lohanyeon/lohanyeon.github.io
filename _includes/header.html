@@ -17,11 +17,12 @@
         <hr class="panel-cover__divider panel-cover__divider--secondary">
 
         <ul style="list-style-type:none;margin:0">
-          <li><a href="/01.intro">intro</a></li>
-          <li><a href="/02.java-jsp">javascript</a></li>
-          <li><a href="/03.database">java/jsp</a></li>
-          <li><a href="/04.javascript">database</a></li>
-          <li style="margin-bottom: 30px;"><a href="/05.python">python</a></li>
+          <li><a href="/about/">About Me</a></li>
+          <!-- <li><a href="/01.intro/">Intro</a></li> -->
+          <li><a href="/02.javascript/">Javascript</a></li>
+          <li><a href="javascript:alert('ready!');">Java/Jsp</a></li>
+          <li><a href="javascript:alert('ready!')">Database</a></li>
+          <li style="margin-bottom: 30px;"><a href="javascript:alert('ready!')">Python</a></li>
         </ul>
 
         <div class="navigation-wrapper">
@@ -37,32 +38,32 @@
 
             {% if site.author.twitter_username %}
               <!-- Twitter -->
-              <li class="navigation__item">
+              <!-- <li class="navigation__item">
                 <a href="http://twitter.com/{{ site.author.twitter_username }}" title="@{{ site.author.twitter_username }} on Twitter" target="_blank">
                   <i class="icon icon-social-twitter"></i>
                   <span class="label">Twitter</span>
                 </a>
-              </li>
+              </li> -->
             {% endif %}
 
             {% if site.author.facebook_username %}
               <!-- Facebook -->
-              <li class="navigation__item">
+              <!-- <li class="navigation__item">
                 <a href="http://fb.me/{{ site.author.facebook_username }}" title="{{ site.author.facebook_username }} on Facebook" target="_blank">
                   <i class="icon icon-social-facebook"></i>
                   <span class="label">Facebook</span>
                 </a>
-              </li>
+              </li> -->
             {% endif %}
 
             {% if site.author.linkedin_username %}
               <!-- LinkedIn -->
-              <li class="navigation__item">
+              <!-- <li class="navigation__item">
                 <a href="https://www.linkedin.com/in/{{ site.author.linkedin_username }}" title="{{ site.author.linkedin_username }} on LinkedIn" target="_blank">
                   <i class="icon icon-social-linkedin"></i>
                   <span class="label">LinkedIn</span>
                 </a>
-              </li>
+              </li> -->
             {% endif %}
 
             {% if site.author.github_username %}
