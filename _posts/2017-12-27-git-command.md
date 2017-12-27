@@ -6,7 +6,7 @@ tags: [git]
 comments: true
 ---
 
-지금까지는 `sourcetree`를 이용하여 `github`를 이용하였는데 command로 하는 습관일 들이고자 정리해본다.
+지금까지는 `sourcetree`를 이용하여 `github`를 이용하였는데 command로 하는 습관을 들이고자 정리해본다.
 
 
 + 새로운 저장소 만들기
