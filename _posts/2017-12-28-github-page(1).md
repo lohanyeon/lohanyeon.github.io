@@ -26,7 +26,7 @@ comments: true
 
 + Repository name에 [본인계정아이디].github.io를 입력한다.
 + Description도 입력 후 Create repository 버튼을 클릭한다.
-+ 만약 Repository name에 [본인계정아이디]외 다른 단어를 입력하게 되면 Context name으로 인식한다고 한다. ex) engel.github.io를 입력하였다면 yeonkh94.github.io/engel로 인식
++ [본인계정아이디].github.io 형식의 url은 계정당 하나만 제공한다고 한다.
 ![Alt text](/images/20171227/03.jpg)
 
 + https 주소를 카피한 후 터미널에서 2번째 박스의 내용을 차례대로 입력해본다.

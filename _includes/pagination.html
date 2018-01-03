@@ -1,7 +1,7 @@
 <nav class="pagination" role="navigation">
   {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-      <a rel="prev" class="posts newer btn small" href="{{ site.baseurl }}/" title="Previous Page">← 이전포스트</a>
+      <a rel="prev" class="posts newer btn small" href="{{ site.baseurl }}/#blog" title="Previous Page">← 이전포스트</a>
     {% else %}
       <a rel="prev" class="posts newer btn small" href="{{ site.baseurl }}/page{{ paginator.previous_page }}/">← 이전포스트</a>
     {% endif %}
