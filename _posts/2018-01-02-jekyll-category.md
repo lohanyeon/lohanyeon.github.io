@@ -3,7 +3,7 @@ title:  "jekyll 블로그 포스트 페이징"
 date:   2018-01-01 09:04:23
 categories: [etc]
 tags: [github, jekyll]
-comments: false
+comments: true
 published: ture
 ---
 
