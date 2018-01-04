@@ -7,6 +7,8 @@ comments: true
 published: ture
 ---
 
+![자바스크립트](/images/common/javascript-myths-and-its-evolution-12-638.jpg)
+
 아직도 혼돈의 세상인 `자바스크립트` 에 대한 표준 및 새로운 버전들이 나오면서 그 버전들에 대해 정리해보고자 한다.  
 
 + __ECMAScript란?__   
