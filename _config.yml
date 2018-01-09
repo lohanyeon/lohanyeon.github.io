@@ -27,7 +27,7 @@ destination: _site
 paginate: 5
 permalink: /:year/:title/
 markdown: kramdown
-highlighter: rouge
+#highlighter: rouge
 
 sass:
     sass_dir: _sass
@@ -37,7 +37,8 @@ kramdown:
   # use Github Flavored Markdown
   input: GFM
   # do not replace newlines by <br>s
-  hard_wrap: false
+  # hard_wrap: false
+  syntax_highlighter: rouge
 
 gems: ['jekyll-paginate']
 # gems:
