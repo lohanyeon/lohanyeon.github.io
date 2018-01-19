@@ -100,7 +100,7 @@ $ chown -R [사용자계정이름] [디렉토리 위치]
 
 + 가상환경 만들기
 ```
-$ mkvirtualenv [가상환경이름]
+$ mkvirtualenv --python=[python3.6] [가상환경이름]
 ```
 
 + 가상환경 삭제
