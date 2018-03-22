@@ -43,3 +43,8 @@ Access via: [http://localhost:4000/jekyll-uno/](http://localhost:4000/jekyll-uno
 ### Copyright and license
 
 It is under [the MIT license](/LICENSE).
+
+### git
+1. git add .
+2. git commit -m 'comment'
+3. git push -u origin master
